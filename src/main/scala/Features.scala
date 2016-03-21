@@ -1,8 +1,7 @@
 import PreProcessingUtil._
-import org.apache.spark.sql.functions.{col, explode, udf}
+import org.apache.spark.sql.functions.col
 import org.apache.spark.sql.{DataFrame, SQLContext}
 import org.apache.spark.{SparkConf, SparkContext}
-
 /*
 * Summary
 * Articles Records : 3,18,591 rows
@@ -38,26 +37,42 @@ object Features {
       .option("user", "root")
       .option("password", "dmkm1234").load()
 
-    val concat_array = udf((xs: Seq[String], sep: String) => xs.mkString(sep))
 
+    // Joining Author and Keywords
     val df_article1 = df_article.select("id","authors","title","journal","year").alias("article")
     val df_keyword1 = df_keyword.select("id", "kw").alias("kw")
 
-    val feature_matrix = df_article1.join(df_keyword1,col("article.id")===col("kw.id"),"left_outer")
+    val transform0 = df_article1.join(df_keyword1,col("article.id")===col("kw.id"),"left_outer")
       .select("article.id","authors","title","journal","year","kw")
 
+    // Remove Author Accents
+    val transform1 = transform0.withColumn("noaccent", stringNormalizer(transform0("authors")))
 
-    val flat_author = feature_matrix.withColumn("authorsSplit", split_author(df_article("authors")))
-    val explode_author = flat_author.withColumn("Author", explode(flat_author("authorsSplit")))
-    //val ex = flat_author.explode("authorsSplit","OriginalAuthor")
+    // Lower case , remove punctuations , split wrt ;
+    val transform2 = transform1.withColumn("splitauthor", splitAuthor(transform1("noaccent"))).drop("noaccent")
+
+    // Rearranging the name "m ranjan" -> "rajan m" helps with
+    val transform3 = transform2.withColumn("authorR", authorRearrange(transform2("splitauthor")))
+
+    transform3.show(3)
+    // .withColumn("sigID", monotonicallyIncreasingId)
+    // Explode authors
+    //val transform3 = transform2.withColumn("Author", explode(transform2("splitauthor")))
     //ex
+    //transform0.show(3)
+    //transform2.printSchema()
+
+
+    //val explode_author = flat_author.withColumn("Author", explode(flat_author("authorsSplit")))
+
+
     //explode_author.select("authorsSplit","Author").show(3)
     //val countdistance = flat_author.withColumn("D", stringNormalizer(df_article("authors")))
     //val countdistance= flat_author.printSchema()
     //val temp  = countdistance.show(3)
-    val op =explode_author.select("authorsSplit").show(3)
+    //val op =explode_author.select("authorsSplit").show(3)
 
-    return flat_author
+    return transform0
   }
 
 
