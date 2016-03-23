@@ -23,20 +23,26 @@ object Features {
     val sc = new SparkContext(conf)
     val sqlContext = new SQLContext(sc)
 
-    // Load Articles
+    // Articles
     val df_article = sqlContext.read.format("jdbc").option("url", "jdbc:mysql://localhost:8889/dmkm_articles")
       .option("driver", "com.mysql.jdbc.Driver")
       .option("dbtable", "articles")
       .option("user", "root")
       .option("password", "dmkm1234").load()
 
-    // Load Keywords
+    // Keywords
     val df_keyword = sqlContext.read.format("jdbc").option("url", "jdbc:mysql://localhost:8889/dmkm_articles")
       .option("driver", "com.mysql.jdbc.Driver")
       .option("dbtable", "kw_new")
       .option("user", "root")
       .option("password", "dmkm1234").load()
 
+    // Id,Author,Article,title,distance
+    val author = sqlContext.read.format("jdbc").option("url", "jdbc:mysql://localhost:8889/dmkm_articles")
+      .option("driver", "com.mysql.jdbc.Driver")
+      .option("dbtable", "kw_new")
+      .option("user", "root")
+      .option("password", "dmkm1234").load()
 
     // Joining Author and Keywords
     val df_article1 = df_article.select("id","authors","title","journal","year").alias("article")
@@ -51,28 +57,31 @@ object Features {
     // Lower case , remove punctuations , split wrt ;
     val transform2 = transform1.withColumn("splitauthor", splitAuthor(transform1("noaccent"))).drop("noaccent")
 
-    // Rearranging the name "m ranjan" -> "rajan m" helps with
-    val transform3 = transform2.withColumn("authorR", authorRearrange(transform2("splitauthor")))
 
+    // Split author convert to array
+    val transform3 = transform2.withColumn("distance", authorD(transform2("splitauthor")))
     transform3.show(3)
+
+
+
+
+    // Rearranging the name "m ranjan" -> "rajan m" helps with
+    //val transform3 = transform2.withColumn("authorR", authorRearrange(transform2("splitauthor")))
+    //transform3.show(3)
     // .withColumn("sigID", monotonicallyIncreasingId)
     // Explode authors
     //val transform3 = transform2.withColumn("Author", explode(transform2("splitauthor")))
     //ex
     //transform0.show(3)
     //transform2.printSchema()
-
-
     //val explode_author = flat_author.withColumn("Author", explode(flat_author("authorsSplit")))
-
-
     //explode_author.select("authorsSplit","Author").show(3)
     //val countdistance = flat_author.withColumn("D", stringNormalizer(df_article("authors")))
     //val countdistance= flat_author.printSchema()
     //val temp  = countdistance.show(3)
     //val op =explode_author.select("authorsSplit").show(3)
 
-    return transform0
+    return transform2
   }
 
 
