@@ -224,5 +224,8 @@
     <orderEntry type="library" name="SBT: org.spark-project.hive:hive-exec:1.2.1.spark:jar" level="project" />
     <orderEntry type="library" name="SBT: org.spark-project.hive:hive-metastore:1.2.1.spark:jar" level="project" />
     <orderEntry type="library" name="SBT: com.rockymadden.stringmetric:stringmetric-core_2.10:0.27.3:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.databricks:spark-csv_2.10:1.4.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.univocity:univocity-parsers:1.5.1:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.apache.commons:commons-csv:1.1:jar" level="project" />
   </component>
 </module>
