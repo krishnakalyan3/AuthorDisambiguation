@@ -13,7 +13,6 @@ object WriteToCSV {
       .option("header", "true")
       .save(pathloc)
 
-
   }
 
 }

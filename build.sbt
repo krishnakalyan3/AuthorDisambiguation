@@ -1,5 +1,3 @@
-
-
 name := "AD"
 
 version := "1.0"
@@ -15,9 +13,12 @@ libraryDependencies ++= Seq("org.apache.spark" %% "spark-core" % "1.6.0" ,
   "mysql" % "mysql-connector-java" % "5.1.12",
   "com.databricks" % "spark-csv_2.10" % "1.4.0"
 )
-libraryDependencies += "com.rockymadden.stringmetric" % "stringmetric-core_2.10" % "0.27.3"
 
-mainClass in assembly := some("AD")
+libraryDependencies += "com.rockymadden.stringmetric" % "stringmetric-core_2.10" % "0.27.3"
+libraryDependencies += "ai.h2o" % "sparkling-water-core_2.10" % "1.6.1"
+
+
+mainClass in assembly := some("ADMain")
 assemblyJarName := "author-disambiguation.jar"
 
 assemblyMergeStrategy in assembly := {

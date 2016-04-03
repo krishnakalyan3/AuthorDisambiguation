@@ -4,7 +4,7 @@
 		module="ad_2.10"
 		revision="1.0"
 		status="integration"
-		publication="20160329144025"
+		publication="20160404013511"
 	>
 		<description>
 		AD
@@ -43,5 +43,6 @@
 		<dependency org="mysql" name="mysql-connector-java" rev="5.1.12" conf="compile->default(compile)"/>
 		<dependency org="com.databricks" name="spark-csv_2.10" rev="1.4.0" conf="compile->default(compile)"/>
 		<dependency org="com.rockymadden.stringmetric" name="stringmetric-core_2.10" rev="0.27.3" conf="compile->default(compile)"/>
+		<dependency org="ai.h2o" name="sparkling-water-core_2.10" rev="1.6.1" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

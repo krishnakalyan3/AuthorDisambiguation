@@ -1,9 +1,13 @@
 [0m[[0minfo[0m] [0mPackaging /Users/krishna/IdeaProjects/AD/target/scala-2.10/ad_2.10-1.0.jar ...[0m
 [0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	DataGroundTruth.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/DataGroundTruth.class[0m
 [0m[[0mdebug[0m] [0m	TestCode$.class[0m
 [0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/TestCode$.class[0m
 [0m[[0mdebug[0m] [0m	LoadData$$anonfun$main$1.class[0m
 [0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/LoadData$$anonfun$main$1.class[0m
+[0m[[0mdebug[0m] [0m	DistanceModelling$.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/DistanceModelling$.class[0m
 [0m[[0mdebug[0m] [0m	PreProcessingUtil$$typecreator3$2.class[0m
 [0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/PreProcessingUtil$$typecreator3$2.class[0m
 [0m[[0mdebug[0m] [0m	PreProcessingUtil$$typecreator1$2.class[0m
@@ -12,6 +16,8 @@
 [0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/PreProcessingUtil$$anonfun$custTrim$1.class[0m
 [0m[[0mdebug[0m] [0m	PreProcessingUtil$$typecreator6$2.class[0m
 [0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/PreProcessingUtil$$typecreator6$2.class[0m
+[0m[[0mdebug[0m] [0m	Numericalization$.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/Numericalization$.class[0m
 [0m[[0mdebug[0m] [0m	PreProcessingUtil$$typecreator1$1.class[0m
 [0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/PreProcessingUtil$$typecreator1$1.class[0m
 [0m[[0mdebug[0m] [0m	PreProcessingUtil$$typecreator7$2.class[0m
@@ -24,6 +30,8 @@
 [0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/PreProcessingUtil$$anonfun$authorRem$1.class[0m
 [0m[[0mdebug[0m] [0m	TestCode.class[0m
 [0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/TestCode.class[0m
+[0m[[0mdebug[0m] [0m	ReadFromCSV$.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/ReadFromCSV$.class[0m
 [0m[[0mdebug[0m] [0m	PreProcessingUtil$$typecreator3$1.class[0m
 [0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/PreProcessingUtil$$typecreator3$1.class[0m
 [0m[[0mdebug[0m] [0m	PreProcessingUtil$$anonfun$3.class[0m
@@ -34,6 +42,8 @@
 [0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/PreProcessingUtil$$anonfun$6.class[0m
 [0m[[0mdebug[0m] [0m	PreProcessingUtil$$anonfun$1.class[0m
 [0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/PreProcessingUtil$$anonfun$1.class[0m
+[0m[[0mdebug[0m] [0m	DataGroundTruth$.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/DataGroundTruth$.class[0m
 [0m[[0mdebug[0m] [0m	PreProcessingUtil$$typecreator4$2.class[0m
 [0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/PreProcessingUtil$$typecreator4$2.class[0m
 [0m[[0mdebug[0m] [0m	TextProcessing$$typecreator1$1.class[0m
@@ -42,6 +52,8 @@
 [0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/PreProcessingUtil$$typecreator2$2.class[0m
 [0m[[0mdebug[0m] [0m	PreProcessingUtil$$anonfun$2.class[0m
 [0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/PreProcessingUtil$$anonfun$2.class[0m
+[0m[[0mdebug[0m] [0m	DataBlock$.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/DataBlock$.class[0m
 [0m[[0mdebug[0m] [0m	PreProcessingUtil$$typecreator6$1.class[0m
 [0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/PreProcessingUtil$$typecreator6$1.class[0m
 [0m[[0mdebug[0m] [0m	ADMain$.class[0m
@@ -50,16 +62,22 @@
 [0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/PreProcessingUtil$$typecreator7$1.class[0m
 [0m[[0mdebug[0m] [0m	ADMain.class[0m
 [0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/ADMain.class[0m
-[0m[[0mdebug[0m] [0m	ADMain$$anonfun$main$1.class[0m
-[0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/ADMain$$anonfun$main$1.class[0m
 [0m[[0mdebug[0m] [0m	LoadData$$typecreator1$1.class[0m
 [0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/LoadData$$typecreator1$1.class[0m
 [0m[[0mdebug[0m] [0m	TextProcessing.class[0m
 [0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/TextProcessing.class[0m
+[0m[[0mdebug[0m] [0m	Statistics.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/Statistics.class[0m
 [0m[[0mdebug[0m] [0m	Features.class[0m
 [0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/Features.class[0m
+[0m[[0mdebug[0m] [0m	DataBlock.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/DataBlock.class[0m
+[0m[[0mdebug[0m] [0m	Statistics$.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/Statistics$.class[0m
 [0m[[0mdebug[0m] [0m	PreProcessingUtil.class[0m
 [0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/PreProcessingUtil.class[0m
+[0m[[0mdebug[0m] [0m	Numericalization.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/Numericalization.class[0m
 [0m[[0mdebug[0m] [0m	Features$.class[0m
 [0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/Features$.class[0m
 [0m[[0mdebug[0m] [0m	LoadData.class[0m
@@ -82,10 +100,14 @@
 [0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/LoadData$$anonfun$1.class[0m
 [0m[[0mdebug[0m] [0m	LoadData$.class[0m
 [0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/LoadData$.class[0m
+[0m[[0mdebug[0m] [0m	ReadFromCSV.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/ReadFromCSV.class[0m
 [0m[[0mdebug[0m] [0m	TextProcessing$$typecreator2$1.class[0m
 [0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/TextProcessing$$typecreator2$1.class[0m
 [0m[[0mdebug[0m] [0m	WriteToCSV$.class[0m
 [0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/WriteToCSV$.class[0m
+[0m[[0mdebug[0m] [0m	DistanceModelling.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/DistanceModelling.class[0m
 [0m[[0mdebug[0m] [0m	PreProcessingUtil$$anonfun$5.class[0m
 [0m[[0mdebug[0m] [0m	  /Users/krishna/IdeaProjects/AD/target/scala-2.10/classes/PreProcessingUtil$$anonfun$5.class[0m
 [0m[[0mdebug[0m] [0m	TextProcessing$.class[0m
