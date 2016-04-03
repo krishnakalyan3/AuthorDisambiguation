@@ -18,7 +18,7 @@ libraryDependencies += "com.rockymadden.stringmetric" % "stringmetric-core_2.10"
 libraryDependencies += "ai.h2o" % "sparkling-water-core_2.10" % "1.6.1"
 
 
-mainClass in assembly := some("ADMain")
+mainClass in (Compile, assembly) := some("ADMain")
 assemblyJarName := "author-disambiguation.jar"
 
 assemblyMergeStrategy in assembly := {
